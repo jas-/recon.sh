@@ -42,7 +42,12 @@ address for the router upstream. When this is done all analysis is
 applicable to the upstream comm device.
 
 
-`./recon.sh`
+```sh
+./recon.sh
+Target: XXX.XXX.XXX.XXX
+CVE(s): CVE-2006-6758,CVE-2010-2134,CVE-2013-4407
+Exploit(s): https://www.exploit-db.com/explits/11584 https://www.exploit-db.com/explits/2974
+```
 
 
 Existing report
@@ -50,14 +55,45 @@ Existing report
 Historical data is available and can be replayed by specifying the
 shodan.io report applicable.
 
-`./recon.sh -r reports/shodan-<target>-<date_stamp>-<julian_day_of_year>`
-
+```sh
+./recon.sh -vr reports/shodan-<TARGET>-<DATESTMP>-<JULAN_DAY_YEAR>
+Target: XXX.XXX.XXX.XXX
+CVE(s): CVE-2000-0470,CVE-2014-9222,CVE-2014-9223,CVE-2015-9222
+Exploit(s): https://www.exploit-db.com/explits/39739
+```
 
 Custom target
 -------
-At times you may wish to find exploits for other systems.
+At times you may wish to find exploits for other systems. Using verbosity.
 
-`./recon.sh -t <target_system>`
+```sh
+./recon.sh -vt <TARGET>
+Info: Using <IPv4> <IPv6> as target(s)
+Info: Found cached shodan data for <IPv4>...
+Info: Found cached shodan data for <IPv6>...
+Info: Using 2 report(s) to locate CPE data
+Info: Found 8 CPE(s) to search for possible CVE data
+Info: Found cached vuldb data for cpe:2.3:a:apache:http:server:2.4.6...
+Info: Found cached vuldb data for cpe:a:apache:http:server:2.4.6...
+Info: Found cached vuldb data for cpe:2.3:a:apache:http:server:2.4.6...
+Info: Found cached vuldb data for cpe:2.3:a:openbsd:openssh:7.4...
+Info: Found cached vuldb data for cpe:2.3:a:postfix:postfix...
+Info: Found cached vuldb data for cpe:a:apache:http:server:2.4.6...
+Info: Found cached vuldb data for cpe:a:openbsd:openssh:7.4...
+Info: Found cached vuldb data for cpe:a:postfix:postfix...
+Info: Using 8 report(s) to locate possible CVE data
+Info: Found 7 CVE(s) applicable to <IPv4> <IPv6>
+Info: Using ./assets/20210815-2459441 as CVE datasource
+Info: Found 2 exploit(s) for <IPv6>...
+Target: <IPv6>
+CVE(s): CVE-2006-6758,CVE-2010-2134,CVE-2013-4407
+Exploit(s): https://www.exploit-db.com/explits/11584 https://www.exploit-db.com/explits/2974
+
+Info: Found 2 exploit(s) for <IPv4>...
+Target: <IPv4>
+CVE(s): CVE-2006-6758,CVE-2010-2134,CVE-2013-4407
+Exploit(s): https://www.exploit-db.com/explits/11584 https://www.exploit-db.com/explits/2974
+```
 
 
 Caveats
