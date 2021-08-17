@@ -371,7 +371,7 @@ for cve in ${cves[@]}; do
   exploits=($(zegrep -i ${filter} ${cve_asset} | grep "EXPLOIT-DB:" |
     sed -n 's/.*EXPLOIT-DB:\(.* \) .*|.*/\1/p' |
     awk '{print $1}' | sort -u |
-    xargs -iS printf "https://www.exploit-db.com/explits/%s\n" S))
+    xargs -iS printf "https://www.exploit-db.com/exploits/%s\n" S))
 
 
   # Skip if nothing found for host
