@@ -1,4 +1,4 @@
-recon
+recon.sh
 ========
 Find exploits about a target without ever touching the target
 
@@ -20,7 +20,7 @@ Examples
 -------
 Available help system and arguments for tool.
 ```sh
-econ.sh - Research targets
+recon.sh - Research targets
 
 Usage ./recon.sh [options]
 
@@ -84,7 +84,7 @@ Here is a list of the remote API's used by this tool:
 Disclaimer
 -------
 This tool provides the user with resources on both existing
-vulnerabiliites and where available existing POC tools to help
-facilite compromise of a system. Using this tool responsibly will
-ensure you do not violate or end up prosecuted under the
+vulnerabiliites and where available, existing POC tools to help
+facilite the compromise of a system. Using this tool responsibly
+will ensure you do not violate or end up prosecuted under the
 Computer Fraud and Abuse Act 18 U.S.C. § 1030
