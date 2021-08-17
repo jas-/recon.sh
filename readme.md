@@ -43,7 +43,7 @@ applicable to the upstream comm device.
 
 
 ```sh
-./recon.sh
+$ ./recon.sh
 Target: XXX.XXX.XXX.XXX
 CVE(s): CVE-2006-6758,CVE-2010-2134,CVE-2013-4407
 Exploit(s): https://www.exploit-db.com/explits/11584 https://www.exploit-db.com/explits/2974
@@ -56,7 +56,7 @@ Historical data is available and can be replayed by specifying the
 shodan.io report applicable.
 
 ```sh
-./recon.sh -vr reports/shodan-<TARGET>-<DATESTMP>-<JULAN_DAY_YEAR>
+$ ./recon.sh -vr reports/shodan-<TARGET>-<DATESTMP>-<JULAN_DAY_YEAR>
 Target: XXX.XXX.XXX.XXX
 CVE(s): CVE-2000-0470,CVE-2014-9222,CVE-2014-9223,CVE-2015-9222
 Exploit(s): https://www.exploit-db.com/explits/39739
@@ -67,7 +67,7 @@ Custom target
 At times you may wish to find exploits for other systems. Using verbosity.
 
 ```sh
-./recon.sh -vt <TARGET>
+$ ./recon.sh -vt <TARGET>
 Info: Using <IPv4> <IPv6> as target(s)
 Info: Found cached shodan data for <IPv4>...
 Info: Found cached shodan data for <IPv6>...
