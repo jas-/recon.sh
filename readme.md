@@ -46,7 +46,7 @@ applicable to the upstream comm device.
 $ ./recon.sh
 Target: XXX.XXX.XXX.XXX
 CVE(s): CVE-2006-6758,CVE-2010-2134,CVE-2013-4407
-Exploit(s): https://www.exploit-db.com/explits/11584 https://www.exploit-db.com/explits/2974
+Exploit(s): https://www.exploit-db.com/exploits/11584 https://www.exploit-db.com/exploits/2974
 ```
 
 
@@ -59,7 +59,7 @@ shodan.io report applicable.
 $ ./recon.sh -vr reports/shodan-<TARGET>-<DATESTMP>-<JULAN_DAY_YEAR>
 Target: XXX.XXX.XXX.XXX
 CVE(s): CVE-2000-0470,CVE-2014-9222,CVE-2014-9223,CVE-2015-9222
-Exploit(s): https://www.exploit-db.com/explits/39739
+Exploit(s): https://www.exploit-db.com/exploits/39739
 ```
 
 Custom target
@@ -87,12 +87,12 @@ Info: Using ./assets/20210815-2459441 as CVE datasource
 Info: Found 2 exploit(s) for <IPv6>...
 Target: <IPv6>
 CVE(s): CVE-2006-6758,CVE-2010-2134,CVE-2013-4407
-Exploit(s): https://www.exploit-db.com/explits/11584 https://www.exploit-db.com/explits/2974
+Exploit(s): https://www.exploit-db.com/exploits/11584 https://www.exploit-db.com/exploits/2974
 
 Info: Found 2 exploit(s) for <IPv4>...
 Target: <IPv4>
 CVE(s): CVE-2006-6758,CVE-2010-2134,CVE-2013-4407
-Exploit(s): https://www.exploit-db.com/explits/11584 https://www.exploit-db.com/explits/2974
+Exploit(s): https://www.exploit-db.com/exploits/11584 https://www.exploit-db.com/exploits/2974
 ```
 
 
