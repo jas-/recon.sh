@@ -25,7 +25,7 @@ recon.sh - Research targets
 Usage ./recon.sh [options]
 
  Options:
-    -c  Cached time for CVE datasource
+    -c  Cached time for datasources; 30 days
     -r  Use existing report
     -t  Targets; supports files, CSV or colon separated lists
     -v  Enable verbosity
@@ -49,18 +49,6 @@ CVE(s): CVE-2006-6758,CVE-2010-2134,CVE-2013-4407
 Exploit(s): https://www.exploit-db.com/exploits/11584 https://www.exploit-db.com/exploits/2974
 ```
 
-
-Existing report
--------
-Historical data is available and can be replayed by specifying the
-shodan.io report applicable.
-
-```sh
-$ ./recon.sh -vr reports/shodan-<TARGET>-<DATESTMP>-<JULAN_DAY_YEAR>
-Target: XXX.XXX.XXX.XXX
-CVE(s): CVE-2000-0470,CVE-2014-9222,CVE-2014-9223,CVE-2015-9222
-Exploit(s): https://www.exploit-db.com/exploits/39739
-```
 
 Custom target
 -------
@@ -96,16 +84,34 @@ Exploit(s): https://www.exploit-db.com/exploits/11584 https://www.exploit-db.com
 ```
 
 
+Existing report
+-------
+Historical data is available and can be replayed by specifying the
+shodan.io report applicable.
+
+```sh
+$ ./recon.sh -vr reports/shodan-<TARGET>-<DATESTMP>-<JULAN_DAY_YEAR>
+Target: XXX.XXX.XXX.XXX
+CVE(s): CVE-2000-0470,CVE-2014-9222,CVE-2014-9223,CVE-2015-9222
+Exploit(s): https://www.exploit-db.com/exploits/39739
+```
+
 Caveats
 -------
-1. This tool is far from perfect and relies on API's it does not
-control or maintain the information available from said sources. As
-such false positives and at times no information may be found on a
-target.
+1. This tool is far from perfect due in part to it's reliance on
+data provided from external API(s). Be aware of false positives and
+the possibility that the target(s) may not have existing scan data
+to work with.
 
 2. The tool makes all attempts to retain and limit requests to the
 API's necessary for reconnasance. The curent cached report time is
 `30` days.
+
+3. The tool ONLY displays those CVE(s) that have existing exploits
+for the service associated with the target. So if a system has a
+known CVE and NOT an existing exploit available from exploit-db.com
+nothing will be presented when there very well could be exising CVE(s)
+available.
 
 
 API(s) used
@@ -114,6 +120,7 @@ Here is a list of the remote API's used by this tool:
 * https://ifconfig.me
 * https://api.shodan.io
 * https://vuldb.com
+* https://www.exploit-db.com
 * https://cve.mitre.org
 
 

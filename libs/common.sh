@@ -12,7 +12,7 @@ recon.sh - Research targets
 Usage ./recon.sh [options]
 
  Options:
-    -c  Cached time for CVE datasource
+    -c  Cached time datasources; 30 days
     -r  Use existing report
     -t  Targets; supports files, CSV or colon separated lists
     -v  Enable verbosity
