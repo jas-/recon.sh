@@ -5,9 +5,9 @@ Find exploits about a target without ever touching the target
 
 Required
 -------
-* An internet connection; specicially egress tcp/443
-* Register for an API key from shodan.io
-* Register for an API key from vuldb.io
+* An internet connection; specifically egress tcp/443
+* An API key from shodan.io; `shodan_api_key`
+* An API key from vuldb.io; `vuldb_api_key`
 
 
 Configure
@@ -35,10 +35,10 @@ Usage ./recon.sh [options]
 
 Default
 -------
-Default use case will find any public configured address(s) to find
+Default use case will find any publicly configured address(s) to find
 exploits about. It does this by looking at local interfaces and if
 only local addresses are found it queries an external API for the
-address for the router upstream. When this is done all analysis is
+address for the upstream router. When this is done all analysis is
 applicable to the upstream comm device.
 
 
